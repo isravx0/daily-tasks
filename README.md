@@ -1,4 +1,4 @@
-# 🍒 Bloomly (working name)
+# 🍒 Bloomly
 
 A gentle productivity app to manage **habits + tasks** in one calm, beautiful space.
 
