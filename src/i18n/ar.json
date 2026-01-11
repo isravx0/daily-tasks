@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "المهام اليومية"
+  },
+  "tabs": {
+    "tasks": "المهام",
+    "settings": "الإعدادات",
+    "habits": "العادات",
+    "dashboard": "لوحة التحكم"
+  },
+  "tasks": {
+    "add": "إضافة",
+    "delete": "حذف",
+    "empty": "لا توجد مهام بعد.",
+    "placeholder": "اكتب مهمة..."
+  },
+  "dashboard": {
+    "welcome": "مرحبًا",
+    "subtitle": "ماذا تود أن تفعل اليوم؟",
+    "tasksSubtitle": "عرض وإدارة مهامك",
+    "habitsSubtitle": "تتبع عاداتك اليومية"
+  },
+  "habits": {
+    "title": "العادات",
+    "subtitle": "تتبع العادات اليومية وحافظ على سلسلة الإنجاز.",
+    "add": "إضافة",
+    "delete": "حذف",
+    "empty": "لا توجد عادات بعد.",
+    "placeholder": "اكتب عادة...",
+    "streak": "سلسلة"
+  },
+  "settings": {
+    "languageTitle": "اللغة",
+    "languageSubtitle": "اختر لغة التطبيق",
+    "language": "لغة التطبيق"
+  },
+  "label": {
+    "to_doList": "قائمة المهام",
+    "to_doListSubtitle": "قائمة بالمهام التي لم يتم إنجازها بعد"
+  }
+}

@@ -19,6 +19,7 @@
 						<ion-select :value="locale" interface="popover" @ionChange="onLanguageChange">
 							<ion-select-option value="en">English</ion-select-option>
 							<ion-select-option value="nl">Nederlands</ion-select-option>
+							<ion-select-option value="ar">العربية</ion-select-option>
 						</ion-select>
 					</ion-item>
 				</ion-card-content>
