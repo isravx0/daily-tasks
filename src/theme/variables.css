@@ -542,7 +542,7 @@ ion-page {
 @media (prefers-color-scheme: dark) {
   :root {
     /* background image */
-    --ion-background-image: url('/assets/images/dark-background.jpg');
+    --ion-background-image: url('/assets/images/dark-background.png');
     /* soft dark surfaces */
     --ion-background-color: #141213;  /* espresso */
     --ion-text-color: #F7EFEA;        /* warm off-white */
