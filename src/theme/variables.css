@@ -527,3 +527,153 @@ ion-button:not([fill]):hover {
 ion-page {
   animation: gentleFadeIn 0.3s ease;
 }
+
+/* =========================================================
+   🌙 DARK MODE (iOS / prefers-color-scheme: dark)
+   Keep it soft, not harsh.
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* soft dark surfaces */
+    --ion-background-color: #141213;  /* espresso */
+    --ion-text-color: #F7EFEA;        /* warm off-white */
+
+    /* surfaces */
+    --ion-color-light: #1C191A;
+    --ion-card-background: #1C191A;
+
+    /* borders */
+    --ion-border-color: rgba(255, 179, 186, 0.18);
+    --ion-item-border-color: rgba(255, 179, 186, 0.14);
+
+    /* keep your brand colors (slightly tuned for dark) */
+    --ion-color-primary: #FFC0C6;
+    --ion-color-primary-rgb: 255,192,198;
+    --ion-color-primary-contrast: #2D0A0D;
+    --ion-color-primary-contrast-rgb: 45,10,13;
+    --ion-color-primary-shade: #E6AEB4;
+    --ion-color-primary-tint: #FFD0D4;
+
+    --ion-color-secondary: #FFD7C6;
+    --ion-color-secondary-rgb: 255,215,198;
+    --ion-color-secondary-contrast: #2D1508;
+    --ion-color-secondary-contrast-rgb: 45,21,8;
+    --ion-color-secondary-shade: #E6C1B2;
+    --ion-color-secondary-tint: #FFE1D4;
+
+    --ion-color-tertiary: #E9CFF0;
+    --ion-color-tertiary-rgb: 233,207,240;
+    --ion-color-tertiary-contrast: #2A1A2D;
+    --ion-color-tertiary-contrast-rgb: 42,26,45;
+    --ion-color-tertiary-shade: #D0B7D6;
+    --ion-color-tertiary-tint: #F0DCF5;
+
+    /* medium text in dark */
+    --ion-color-medium: rgba(247, 239, 234, 0.72);
+  }
+
+  /* --------- TOOLBAR / HEADER --------- */
+  ion-toolbar {
+    --background: rgba(20, 18, 19, 0.72); /* glassy dark */
+    --color: #F7EFEA;
+    --border-color: rgba(255, 179, 186, 0.12);
+    --border-width: 0 0 1px 0;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  ion-title {
+    text-shadow: none; /* cleaner in dark */
+  }
+
+  ion-header {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  /* --------- CARDS --------- */
+  ion-card {
+    border: 1px solid rgba(255, 179, 186, 0.14);
+    background: linear-gradient(
+      145deg,
+      rgba(28, 25, 26, 0.92) 0%,
+      rgba(28, 25, 26, 0.72) 100%
+    );
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  ion-card-header {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 179, 186, 0.10) 0%,
+      rgba(224, 187, 228, 0.08) 60%,
+      rgba(255, 204, 182, 0.06) 100%
+    );
+    border-bottom: 1px solid rgba(255, 179, 186, 0.10);
+  }
+
+  ion-card-subtitle,
+  p,
+  small {
+    color: rgba(247, 239, 234, 0.70);
+  }
+
+  /* --------- ITEMS / LISTS --------- */
+  ion-list {
+    background: transparent;
+  }
+
+  ion-item {
+    --background: rgba(255, 255, 255, 0.06);
+    --color: #F7EFEA;
+    --border-color: rgba(255, 179, 186, 0.10);
+  }
+
+  ion-item:hover {
+    --background: rgba(255, 255, 255, 0.10);
+  }
+
+  ion-label {
+    color: #F7EFEA;
+  }
+
+  /* --------- MENU --------- */
+  ion-menu {
+    --background: #141213;
+  }
+
+  ion-menu ion-toolbar {
+    --background: rgba(20, 18, 19, 0.85);
+    --color: #F7EFEA;
+  }
+
+  ion-menu ion-item {
+    --background: transparent;
+    --color: #F7EFEA;
+  }
+
+  ion-menu ion-item:hover {
+    --background: rgba(255, 179, 186, 0.10);
+  }
+
+  /* --------- TAB BAR --------- */
+  ion-tab-bar {
+    --background: rgba(20, 18, 19, 0.85);
+    border-top: 1px solid rgba(255, 179, 186, 0.12);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  ion-tab-button {
+    --color: rgba(247, 239, 234, 0.65);
+    --color-selected: #FFC0C6;
+  }
+
+  /* --------- BUTTONS --------- */
+  ion-button:not([fill]) {
+    --background: linear-gradient(135deg, #FFC0C6 0%, #FFD7C6 100%);
+    --box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+  }
+}
