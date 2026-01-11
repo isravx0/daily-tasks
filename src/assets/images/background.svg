@@ -1,0 +1,199 @@
+<svg width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">
+  <!-- Enhanced gradients and filters -->
+  <defs>
+    <!-- Dreamy gradient background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF5F7;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFE8EC;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#F5E6FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE5F0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Radial gradient for depth -->
+    <radialGradient id="radialGlow" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFB3BA;stop-opacity:0.15" />
+      <stop offset="50%" style="stop-color:#E0BBE4;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#FFCCB6;stop-opacity:0.03" />
+    </radialGradient>
+    
+    <!-- Enhanced soft glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Dreamy blur -->
+    <filter id="dreamyBlur">
+      <feGaussianBlur stdDeviation="12" />
+    </filter>
+    
+    <!-- Subtle texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" seed="5" />
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0 0 0 1"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in="SourceGraphic" />
+    </filter>
+    
+    <!-- Gradient for hearts -->
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB3BA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC4C9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for lavender elements -->
+    <linearGradient id="lavenderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0BBE4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8CAE9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1080" height="1920" fill="url(#bgGradient)" />
+  
+  <!-- Radial glow overlay for depth -->
+  <rect width="1080" height="1920" fill="url(#radialGlow)" />
+  
+  <!-- Very subtle noise texture -->
+  <rect width="1080" height="1920" fill="#FFF9F5" opacity="0.02" filter="url(#noise)" />
+  
+  <!-- Large dreamy blobs with gradient -->
+  <g filter="url(#dreamyBlur)">
+    <circle cx="100" cy="150" r="220" fill="#FFB3BA" opacity="0.12" />
+    <circle cx="950" cy="350" r="180" fill="#E0BBE4" opacity="0.10" />
+    <circle cx="150" cy="700" r="240" fill="#FFCCB6" opacity="0.09" />
+    <circle cx="900" cy="1000" r="200" fill="#D4F1F4" opacity="0.11" />
+    <circle cx="250" cy="1350" r="230" fill="#FFB3BA" opacity="0.10" />
+    <circle cx="800" cy="1700" r="190" fill="#E0BBE4" opacity="0.09" />
+  </g>
+  
+  <!-- Medium soft blobs -->
+  <g filter="url(#softGlow)">
+    <circle cx="500" cy="250" r="100" fill="#FFC4C9" opacity="0.08" />
+    <circle cx="700" cy="550" r="90" fill="#E8CAE9" opacity="0.07" />
+    <circle cx="350" cy="900" r="110" fill="#FFD6C4" opacity="0.08" />
+    <circle cx="750" cy="1250" r="95" fill="#DFF5F7" opacity="0.07" />
+    <circle cx="450" cy="1600" r="105" fill="#FFC4C9" opacity="0.08" />
+  </g>
+  
+  <!-- Floating hearts with gradient -->
+  <g opacity="0.15">
+    <!-- Large hearts -->
+    <path d="M 120 120 C 120 105, 135 90, 150 90 C 165 90, 180 105, 180 120 C 180 145, 150 170, 150 170 C 150 170, 120 145, 120 120 Z" 
+          fill="url(#heartGradient)" filter="url(#softGlow)" />
+    
+    <path d="M 850 280 C 850 270, 860 260, 870 260 C 880 260, 890 270, 890 280 C 890 295, 870 310, 870 310 C 870 310, 850 295, 850 280 Z" 
+          fill="url(#lavenderGradient)" filter="url(#softGlow)" />
+    
+    <!-- Medium hearts -->
+    <path d="M 220 520 C 220 510, 230 500, 240 500 C 250 500, 260 510, 260 520 C 260 535, 240 550, 240 550 C 240 550, 220 535, 220 520 Z" 
+          fill="url(#heartGradient)" />
+    
+    <path d="M 720 720 C 720 712, 728 704, 736 704 C 744 704, 752 712, 752 720 C 752 732, 736 744, 736 744 C 736 744, 720 732, 720 720 Z" 
+          fill="#FFCCB6" />
+    
+    <path d="M 420 970 C 420 962, 428 954, 436 954 C 444 954, 452 962, 452 970 C 452 982, 436 994, 436 994 C 436 994, 420 982, 420 970 Z" 
+          fill="url(#lavenderGradient)" />
+    
+    <path d="M 880 1220 C 880 1212, 888 1204, 896 1204 C 904 1204, 912 1212, 912 1220 C 912 1232, 896 1244, 896 1244 C 896 1244, 880 1232, 880 1220 Z" 
+          fill="#D4F1F4" />
+    
+    <path d="M 180 1520 C 180 1510, 190 1500, 200 1500 C 210 1500, 220 1510, 220 1520 C 220 1535, 200 1550, 200 1550 C 200 1550, 180 1535, 180 1520 Z" 
+          fill="url(#heartGradient)" />
+    
+    <!-- Small hearts scattered -->
+    <path d="M 600 400 C 600 396, 604 392, 608 392 C 612 392, 616 396, 616 400 C 616 406, 608 412, 608 412 C 608 412, 600 406, 600 400 Z" 
+          fill="#FFB3BA" />
+    
+    <path d="M 300 850 C 300 846, 304 842, 308 842 C 312 842, 316 846, 316 850 C 316 856, 308 862, 308 862 C 308 862, 300 856, 300 850 Z" 
+          fill="#E0BBE4" />
+    
+    <path d="M 800 1450 C 800 1446, 804 1442, 808 1442 C 812 1442, 816 1446, 816 1450 C 816 1456, 808 1462, 808 1462 C 808 1462, 800 1456, 800 1450 Z" 
+          fill="#FFCCB6" />
+  </g>
+  
+  <!-- Sparkly stars with glow -->
+  <g opacity="0.20" filter="url(#softGlow)">
+    <!-- 4-point stars -->
+    <path d="M 320 170 L 324 174 L 320 178 L 316 174 Z" fill="#E0BBE4" />
+    <path d="M 318 174 L 320 174 L 320 176 L 318 176 Z" fill="#FFFFFF" opacity="0.8" />
+    
+    <path d="M 650 380 L 655 385 L 650 390 L 645 385 Z" fill="#FFB3BA" />
+    <path d="M 648 385 L 650 385 L 650 387 L 648 387 Z" fill="#FFFFFF" opacity="0.8" />
+    
+    <path d="M 480 670 L 485 675 L 480 680 L 475 675 Z" fill="#FFCCB6" />
+    <path d="M 478 675 L 480 675 L 480 677 L 478 677 Z" fill="#FFFFFF" opacity="0.8" />
+    
+    <path d="M 770 980 L 775 985 L 770 990 L 765 985 Z" fill="#D4F1F4" />
+    <path d="M 768 985 L 770 985 L 770 987 L 768 987 Z" fill="#FFFFFF" opacity="0.8" />
+    
+    <path d="M 280 1270 L 285 1275 L 280 1280 L 275 1275 Z" fill="#E0BBE4" />
+    <path d="M 278 1275 L 280 1275 L 280 1277 L 278 1277 Z" fill="#FFFFFF" opacity="0.8" />
+    
+    <path d="M 630 1570 L 635 1575 L 630 1580 L 625 1575 Z" fill="#FFB3BA" />
+    <path d="M 628 1575 L 630 1575 L 630 1577 L 628 1577 Z" fill="#FFFFFF" opacity="0.8" />
+    
+    <!-- Small sparkles -->
+    <circle cx="400" cy="300" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="750" cy="600" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="250" cy="1100" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="850" cy="1400" r="2" fill="#FFFFFF" opacity="0.9" />
+  </g>
+  
+  <!-- Decorative dots with depth -->
+  <g opacity="0.12">
+    <circle cx="520" cy="320" r="6" fill="#FFB3BA" filter="url(#softGlow)" />
+    <circle cx="200" cy="620" r="5" fill="#E0BBE4" filter="url(#softGlow)" />
+    <circle cx="900" cy="770" r="7" fill="#FFCCB6" filter="url(#softGlow)" />
+    <circle cx="370" cy="1070" r="6" fill="#D4F1F4" filter="url(#softGlow)" />
+    <circle cx="640" cy="1370" r="5" fill="#FFB3BA" filter="url(#softGlow)" />
+    <circle cx="180" cy="1720" r="6" fill="#E0BBE4" filter="url(#softGlow)" />
+    
+    <!-- Smaller dots -->
+    <circle cx="450" cy="450" r="3" fill="#FFB3BA" />
+    <circle cx="820" cy="820" r="3" fill="#E0BBE4" />
+    <circle cx="300" cy="1200" r="3" fill="#FFCCB6" />
+    <circle cx="700" cy="1550" r="3" fill="#D4F1F4" />
+  </g>
+  
+  <!-- Flowing wavy lines -->
+  <g opacity="0.08" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M 0 280 Q 180 260, 360 280 T 720 280 Q 900 260, 1080 280" stroke="#FFB3BA" filter="url(#softGlow)" />
+    <path d="M 0 320 Q 180 340, 360 320 T 720 320 Q 900 340, 1080 320" stroke="#E0BBE4" filter="url(#softGlow)" />
+    
+    <path d="M 0 880 Q 180 900, 360 880 T 720 880 Q 900 900, 1080 880" stroke="#FFCCB6" filter="url(#softGlow)" />
+    <path d="M 0 920 Q 180 900, 360 920 T 720 920 Q 900 900, 1080 920" stroke="#D4F1F4" filter="url(#softGlow)" />
+    
+    <path d="M 0 1480 Q 180 1460, 360 1480 T 720 1480 Q 900 1460, 1080 1480" stroke="#FFB3BA" filter="url(#softGlow)" />
+    <path d="M 0 1520 Q 180 1540, 360 1520 T 720 1520 Q 900 1540, 1080 1520" stroke="#E0BBE4" filter="url(#softGlow)" />
+  </g>
+  
+  <!-- Tiny confetti particles -->
+  <g opacity="0.10">
+    <rect x="380" y="220" width="4" height="4" rx="1" fill="#FFB3BA" transform="rotate(15 382 222)" />
+    <rect x="560" y="480" width="3" height="3" rx="1" fill="#E0BBE4" transform="rotate(-20 561 481)" />
+    <rect x="240" y="740" width="4" height="4" rx="1" fill="#FFCCB6" transform="rotate(30 242 742)" />
+    <rect x="810" cy="1050" width="3" height="3" rx="1" fill="#D4F1F4" transform="rotate(-15 811 1051)" />
+    <rect x="420" y="1310" width="4" height="4" rx="1" fill="#FFB3BA" transform="rotate(25 422 1312)" />
+    <rect x="730" y="1620" width="3" height="3" rx="1" fill="#E0BBE4" transform="rotate(-25 731 1621)" />
+    
+    <!-- Circles -->
+    <circle cx="280" cy="360" r="2.5" fill="#E0BBE4" />
+    <circle cx="670" cy="590" r="2" fill="#FFB3BA" />
+    <circle cx="150" cy="930" r="2.5" fill="#FFCCB6" />
+    <circle cx="920" cy="1180" r="2" fill="#D4F1F4" />
+    <circle cx="510" cy="1470" r="2.5" fill="#FFB3BA" />
+  </g>
+  
+  <!-- Dreamy light spots -->
+  <g opacity="0.06" filter="url(#dreamyBlur)">
+    <circle cx="540" cy="480" r="60" fill="#FFFFFF" />
+    <circle cx="200" cy="960" r="70" fill="#FFFFFF" />
+    <circle cx="880" cy="1440" r="65" fill="#FFFFFF" />
+  </g>
+</svg>

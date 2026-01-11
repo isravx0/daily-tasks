@@ -1,0 +1,41 @@
+{
+	"app": {
+		"title": "Daily Tasks"
+	},
+	"tabs": {
+		"tasks": "Tasks",
+		"settings": "Settings",
+		"habits": "Habits",
+		"dashboard": "Dashboard"
+	},
+	"tasks": {
+		"add": "Add",
+		"delete": "Delete",
+		"empty": "No tasks yet.",
+		"placeholder": "Type a task..."
+	},
+	"dashboard": {
+		"welcome": "Welcome",
+		"subtitle": "What would you like to do today?",
+		"tasksSubtitle": "View and manage your tasks",
+		"habitsSubtitle": "Track your daily habits"
+	},
+	"habits": {
+		"title": "Habits",
+		"subtitle": "Track daily habits and keep your streak.",
+		"add": "Add",
+		"delete": "Delete",
+		"empty": "No habits yet.",
+		"placeholder": "Type a habit...",
+		"streak": "Streak"
+	},
+	"settings": {
+		"languageTitle": "Language",
+		"languageSubtitle": "Choose your app language",
+		"language": "App language"
+	},
+	"label": {
+		"to_doList": "To Do List",
+		"to_doListSubtitle": "List of tasks that still need to be done"
+	}
+}

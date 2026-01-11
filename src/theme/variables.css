@@ -1,2 +1,536 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+:root {
+	/* PRIMARY – Soft Rose Pink (gentle + calming) */
+	--ion-color-primary: #FFB3BA;
+	--ion-color-primary-rgb: 255,179,186;
+	--ion-color-primary-contrast: #2D0A0D;
+	--ion-color-primary-contrast-rgb: 45,10,13;
+	--ion-color-primary-shade: #E09FA5;
+	--ion-color-primary-tint: #FFC4C9;
+
+	/* SECONDARY – Peachy Cream (warm + cozy) */
+	--ion-color-secondary: #FFCCB6;
+	--ion-color-secondary-rgb: 255,204,182;
+	--ion-color-secondary-contrast: #2D1508;
+	--ion-color-secondary-contrast-rgb: 45,21,8;
+	--ion-color-secondary-shade: #E0B39F;
+	--ion-color-secondary-tint: #FFD6C4;
+
+	/* TERTIARY – Soft Lavender (dreamy + cute) */
+	--ion-color-tertiary: #E0BBE4;
+	--ion-color-tertiary-rgb: 224,187,228;
+	--ion-color-tertiary-contrast: #2A1A2D;
+	--ion-color-tertiary-contrast-rgb: 42,26,45;
+	--ion-color-tertiary-shade: #C5A4C8;
+	--ion-color-tertiary-tint: #E8CAE9;
+
+	/* SUCCESS – Mint Cream (fresh + done) */
+	--ion-color-success: #D4F1F4;
+	--ion-color-success-rgb: 212,241,244;
+	--ion-color-success-contrast: #0A2426;
+	--ion-color-success-contrast-rgb: 10,36,38;
+	--ion-color-success-shade: #BBD4D7;
+	--ion-color-success-tint: #DFF5F7;
+
+	/* WARNING – Butter Yellow (soft + gentle) */
+	--ion-color-warning: #FFF4B8;
+	--ion-color-warning-rgb: 255,244,184;
+	--ion-color-warning-contrast: #2D2608;
+	--ion-color-warning-contrast-rgb: 45,38,8;
+	--ion-color-warning-shade: #E0D7A1;
+	--ion-color-warning-tint: #FFF7C9;
+
+	/* DANGER – Coral Blush (gentle alert) */
+	--ion-color-danger: #FFB5B5;
+	--ion-color-danger-rgb: 255,181,181;
+	--ion-color-danger-contrast: #2D0A0A;
+	--ion-color-danger-contrast-rgb: 45,10,10;
+	--ion-color-danger-shade: #E09F9F;
+	--ion-color-danger-tint: #FFC4C4;
+
+	/* MEDIUM – Soft Mauve (subtle text) */
+	--ion-color-medium: #B8A6A6;
+	--ion-color-medium-rgb: 184,166,166;
+	--ion-color-medium-contrast: #1A1616;
+	--ion-color-medium-contrast-rgb: 26,22,22;
+	--ion-color-medium-shade: #A19292;
+	--ion-color-medium-tint: #C4B5B5;
+
+	/* LIGHT – Soft Cream (background) */
+	--ion-color-light: #FFF9F5;
+	--ion-color-light-rgb: 255,249,245;
+	--ion-color-light-contrast: #1A1A1A;
+	--ion-color-light-contrast-rgb: 26,26,26;
+	--ion-color-light-shade: #E0DCD8;
+	--ion-color-light-tint: #FFFBF8;
+
+	/* Background & Surface Colors */
+	--ion-background-color: #FFF9F5;
+	--ion-text-color: #2D2424;
+	
+	/* Enhanced Card Styling */
+	--ion-card-background: #FFFFFF;
+	
+	/* Soft Borders & Shadows */
+	--ion-border-color: rgba(255, 179, 186, 0.15);
+	--ion-item-border-color: rgba(255, 179, 186, 0.12);
+	
+	/* Typography enhancements */
+	--ion-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ============================================
+	 BACKGROUND IMAGE
+	 ============================================ */
+	ion-content {
+		--background: url('/src/assets/images/background.png') center/cover no-repeat;
+	}
+
+/* ============================================
+	 GENTLE CARD STYLING
+	 ============================================ */
+ion-card {
+	border-radius: 24px;
+	box-shadow: 0 4px 24px rgba(255, 179, 186, 0.15), 
+							0 2px 8px rgba(224, 187, 228, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	overflow: hidden;
+	border: 1px solid rgba(255, 179, 186, 0.1);
+	background: linear-gradient(145deg, 
+		#FFFFFF 0%, 
+		rgba(255, 249, 245, 0.5) 100%);
+}
+
+ion-card[button]:hover,
+ion-card[button]:active {
+	transform: translateY(-4px) scale(1.01);
+	box-shadow: 0 8px 32px rgba(255, 179, 186, 0.25), 
+							0 4px 12px rgba(224, 187, 228, 0.15);
+}
+
+ion-card-header {
+	padding: 24px 24px 16px;
+	background: linear-gradient(135deg, 
+		rgba(255, 179, 186, 0.12) 0%, 
+		rgba(224, 187, 228, 0.08) 50%,
+		rgba(255, 204, 182, 0.06) 100%);
+	border-bottom: 1px solid rgba(255, 179, 186, 0.08);
+}
+
+ion-card-title {
+	font-size: 1.4rem;
+	font-weight: 600;
+	background: linear-gradient(135deg, #FFB3BA 0%, #E0BBE4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	letter-spacing: -0.02em;
+}
+
+ion-card-subtitle {
+	font-size: 0.95rem;
+	color: var(--ion-color-medium);
+	margin-top: 6px;
+	opacity: 0.85;
+	font-weight: 400;
+}
+
+ion-card-content {
+	padding: 24px;
+}
+
+/* ============================================
+	 SOFT BUTTON STYLING
+	 ============================================ */
+ion-button {
+	--border-radius: 16px;
+	--padding-start: 24px;
+	--padding-end: 24px;
+	--padding-top: 12px;
+	--padding-bottom: 12px;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	text-transform: none;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ion-button:not([fill]) {
+	--background: linear-gradient(135deg, #FFB3BA 0%, #FFCCB6 100%);
+	--background-hover: linear-gradient(135deg, #E09FA5 0%, #E0B39F 100%);
+	--box-shadow: 0 4px 12px rgba(255, 179, 186, 0.3);
+}
+
+ion-button:hover {
+	transform: translateY(-2px) scale(1.02);
+	--box-shadow: 0 6px 20px rgba(255, 179, 186, 0.4);
+}
+
+ion-button[fill="clear"] {
+	--border-radius: 12px;
+	--padding-start: 14px;
+	--padding-end: 14px;
+}
+
+ion-button[color="danger"] {
+	--background: linear-gradient(135deg, #FFB5B5 0%, #FFC4C4 100%);
+}
+
+/* ============================================
+	 GENTLE ITEM & INPUT STYLING
+	 ============================================ */
+ion-item {
+	--border-radius: 16px;
+	--border-color: rgba(255, 179, 186, 0.1);
+	--background: rgba(255, 255, 255, 0.7);
+	--padding-start: 18px;
+	--padding-end: 18px;
+	--inner-padding-end: 18px;
+	--min-height: 56px;
+	margin-bottom: 10px;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(10px);
+}
+
+ion-item:hover {
+	--background: rgba(255, 249, 245, 0.95);
+	transform: translateX(4px);
+}
+
+ion-item[button] {
+	cursor: pointer;
+}
+
+ion-input {
+	--padding-start: 12px;
+	--padding-end: 12px;
+	font-size: 1rem;
+	--placeholder-opacity: 0.6;
+}
+
+ion-input::part(native) {
+	border-radius: 12px;
+}
+
+/* ============================================
+	 CHECKBOX & LABEL STYLING
+	 ============================================ */
+ion-checkbox {
+	--size: 26px;
+	--border-radius: 8px;
+	--border-width: 2px;
+	--border-color: var(--ion-color-primary);
+	--background-checked: linear-gradient(135deg, #FFB3BA 0%, #E0BBE4 100%);
+	--checkmark-color: white;
+	margin-right: 18px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ion-checkbox:hover {
+	transform: scale(1.15) rotate(5deg);
+}
+
+ion-label {
+	font-size: 1.05rem;
+	line-height: 1.6;
+	transition: all 0.3s ease;
+	color: var(--ion-text-color);
+}
+
+/* ============================================
+	 TOOLBAR & HEADER ENHANCEMENTS
+	 ============================================ */
+ion-toolbar {
+	--background: linear-gradient(135deg, 
+		#FFB3BA 0%, 
+		#FFCCB6 50%,
+		rgb(255, 255, 255) 100%);
+	--color: #FFFFFF;
+	--border-width: 0;
+	--min-height: 64px;
+	backdrop-filter: blur(10px);
+}
+
+ion-title {
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-header {
+	box-shadow: 0 4px 20px rgba(255, 179, 186, 0.2);
+}
+
+/* ============================================
+	 TAB BAR STYLING
+	 ============================================ */
+ion-tab-bar {
+	--background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(20px);
+	border-top: 1px solid rgba(255, 179, 186, 0.15);
+	box-shadow: 0 -4px 20px rgba(255, 179, 186, 0.12);
+	padding-bottom: env(safe-area-inset-bottom);
+	height: calc(65px + env(safe-area-inset-bottom));
+}
+
+ion-tab-button {
+	--color: var(--ion-color-medium);
+	--color-selected: #FFB3BA;
+	--padding-top: 10px;
+	--padding-bottom: 10px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	transition: all 0.3s ease;
+}
+
+ion-tab-button::part(native) {
+	border-radius: 16px;
+	margin: 6px;
+}
+
+ion-tab-button:hover {
+	--color: #E09FA5;
+	transform: scale(1.05);
+}
+
+ion-tab-button.tab-selected {
+	--color: #FFB3BA;
+}
+
+/* ============================================
+	 LIST ENHANCEMENTS
+	 ============================================ */
+ion-list {
+	background: transparent;
+	padding: 10px 0;
+}
+
+/* ============================================
+	 MENU STYLING
+	 ============================================ */
+ion-menu {
+	--background: linear-gradient(180deg, 
+		#FFF9F5 0%, 
+		#FFFFFF 100%);
+}
+
+ion-menu ion-toolbar {
+	--background: linear-gradient(135deg, #FFB3BA 0%, #E0BBE4 100%);
+}
+
+ion-menu ion-item {
+	--border-radius: 16px;
+	--background: transparent;
+	margin: 6px 16px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+ion-menu ion-item:hover {
+	--background: rgba(255, 179, 186, 0.15);
+	transform: translateX(8px) scale(1.02);
+}
+
+/* ============================================
+	 CONTENT PADDING & SPACING
+	 ============================================ */
+ion-content {
+	--padding-top: 20px;
+	--padding-bottom: 20px;
+}
+
+ion-content.ion-padding {
+	--padding-start: 20px;
+	--padding-end: 20px;
+}
+
+/* ============================================
+	 TEXT & TYPOGRAPHY
+	 ============================================ */
+h2 {
+	background: linear-gradient(135deg, #FFB3BA 0%, #E0BBE4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	margin-bottom: 10px;
+	font-size: 1.8rem;
+}
+
+p {
+	color: var(--ion-color-medium);
+	line-height: 1.7;
+	margin-top: 6px;
+	font-size: 1rem;
+}
+
+small {
+	font-size: 0.9rem;
+	color: var(--ion-color-medium);
+	opacity: 0.9;
+}
+
+b {
+	background: linear-gradient(135deg, #FFB3BA 0%, #FFCCB6 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 600;
+}
+
+/* ============================================
+	 ANIMATIONS & MICRO-INTERACTIONS
+	 ============================================ */
+@keyframes gentleFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes floatIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+ion-card {
+	animation: floatIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stagger animation for list items */
+ion-list ion-item {
+	animation: gentleFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	animation-fill-mode: both;
+}
+
+ion-list ion-item:nth-child(1) { animation-delay: 0.05s; }
+ion-list ion-item:nth-child(2) { animation-delay: 0.1s; }
+ion-list ion-item:nth-child(3) { animation-delay: 0.15s; }
+ion-list ion-item:nth-child(4) { animation-delay: 0.2s; }
+ion-list ion-item:nth-child(5) { animation-delay: 0.25s; }
+ion-list ion-item:nth-child(6) { animation-delay: 0.3s; }
+ion-list ion-item:nth-child(7) { animation-delay: 0.35s; }
+ion-list ion-item:nth-child(8) { animation-delay: 0.4s; }
+
+/* Subtle floating animation for cards */
+@keyframes subtleFloat {
+	0%, 100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-4px);
+	}
+}
+
+ion-card[button] {
+	animation: subtleFloat 3s ease-in-out infinite;
+}
+
+/* ============================================
+	 GRID ENHANCEMENTS
+	 ============================================ */
+ion-grid {
+	padding: 0;
+}
+
+ion-row {
+	margin: 0 -10px;
+}
+
+ion-col {
+	padding: 10px;
+}
+
+/* ============================================
+	 SELECT & FORM CONTROLS
+	 ============================================ */
+ion-select {
+	--padding-start: 14px;
+	--padding-end: 14px;
+	font-weight: 500;
+}
+
+ion-select::part(icon) {
+	color: var(--ion-color-primary);
+}
+
+ion-select::part(container) {
+	border-radius: 12px;
+}
+
+/* ============================================
+	 RESPONSIVE ADJUSTMENTS
+	 ============================================ */
+@media (min-width: 768px) {
+	ion-content.ion-padding {
+		--padding-start: 40px;
+		--padding-end: 40px;
+	}
+	
+	ion-card {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	ion-grid {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}
+
+/* ============================================
+	 ACCESSIBILITY ENHANCEMENTS
+	 ============================================ */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+	
+	ion-card[button] {
+		animation: none !important;
+	}
+}
+
+/* Focus states for keyboard navigation */
+ion-button:focus-visible,
+ion-item:focus-visible,
+ion-checkbox:focus-visible {
+	outline: 3px solid rgba(255, 179, 186, 0.5);
+	outline-offset: 3px;
+}
+
+/* ============================================
+	 EXTRA CUTE TOUCHES
+	 ============================================ */
+/* Gradient text for streaks and special numbers */
+ion-label b {
+	background: linear-gradient(135deg, #FFB3BA 0%, #E0BBE4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 700;
+}
+
+/* Soft glow effect on buttons when hovering */
+ion-button:not([fill]):hover {
+	filter: brightness(1.05);
+}
+
+/* Smooth page transitions */
+ion-page {
+	animation: gentleFadeIn 0.3s ease;
+}

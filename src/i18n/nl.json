@@ -1,0 +1,41 @@
+{
+	"app": {
+		"title": "Dagelijkse Taken"
+	},
+	"tabs": {
+		"tasks": "Taken",
+		"settings": "Instellingen",
+		"habits": "Gewoontes",
+		"dashboard": "Dashboard"
+	},
+	"dashboard": {
+		"welcome": "Welkom",
+		"subtitle": "Wat wil je vandaag doen?",
+		"tasksSubtitle": "Bekijk en beheer je taken",
+		"habitsSubtitle": "Houd je dagelijkse gewoontes bij"
+	},
+	"tasks": {
+		"add": "Toevoegen",
+		"delete": "Verwijderen",
+		"empty": "Nog geen taken.",
+		"placeholder": "Type een taak..."
+	},
+	"settings": {
+		"languageTitle": "Taal",
+		"languageSubtitle": "Kies de taal van de app",
+		"language": "App-taal"
+	},
+	"habits": {
+		"title": "Gewoontes",
+		"subtitle": "Houd je dagelijkse gewoontes bij en bouw een streak op.",
+		"add": "Toevoegen",
+		"delete": "Verwijderen",
+		"empty": "Nog geen gewoontes.",
+		"placeholder": "Type een taak...",
+		"streak": "Streak"
+	},
+	"label": {
+		"to_doList": "Te doen lijst",
+		"to_doListSubtitle": "Lijst van taken die nog gedaan moeten worden"
+	}
+}
