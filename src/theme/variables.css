@@ -79,6 +79,13 @@
 }
 
 /* ============================================
+	 BACKGROUND IMAGE
+	 ============================================ */
+	ion-content {
+		--background: url('/src/assets/images/background.png') center/cover no-repeat;
+	}
+
+/* ============================================
    GENTLE CARD STYLING
    ============================================ */
 ion-card {
