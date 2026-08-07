@@ -1,4 +1,5 @@
 :root {
+  --app-wallpaper: url('/src/assets/images/background.png');
   /* PRIMARY – Soft Rose Pink (gentle + calming) */
   --ion-color-primary: #FFB3BA;
   --ion-color-primary-rgb: 255,179,186;
@@ -81,8 +82,8 @@
 /* ============================================
 	 BACKGROUND IMAGE
 	 ============================================ */
-	ion-content {
-		--background: url('/src/assets/images/background.png') center/cover no-repeat;
+ion-content {
+		--background: var(--app-wallpaper) center/cover no-repeat;
 	}
 
 /* ============================================
@@ -528,6 +529,85 @@ ion-label b {
 /* Soft glow effect on buttons when hovering */
 ion-button:not([fill]):hover {
   filter: brightness(1.05);
+}
+
+/* =========================================================
+   PERSONAL PLANNER HOME + BACKGROUND STUDIO
+   ========================================================= */
+ion-content::part(background) {
+  background-position: center;
+}
+
+.app-header ion-toolbar {
+  --background: rgba(255, 250, 249, 0.72);
+  --color: #302b35;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.app-header ion-title { text-shadow: none; font-weight: 750; }
+.app-header ion-button { --color: #645a70; }
+.dashboard-content, .settings-content { --padding-top: 28px; }
+.greeting, .settings-intro { max-width: 540px; margin: 0 auto 24px; }
+.eyebrow { color: #8e7392; font-size: .7rem; font-weight: 800; letter-spacing: .13em; margin: 0 0 6px; }
+.greeting h1, .settings-intro h1 { color: #302b35; font-size: clamp(2rem, 7vw, 2.65rem); letter-spacing: -.055em; line-height: 1.05; margin: 0; font-weight: 800; }
+.greeting p:not(.eyebrow), .settings-intro p:not(.eyebrow) { color: #685f70; max-width: 430px; line-height: 1.55; margin: 11px 0 0; }
+
+.focus-card, .encouragement, .studio-card {
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(255,255,255,.85);
+  box-shadow: 0 12px 32px rgba(102, 72, 95, .12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.focus-card { border-radius: 27px; display: flex; align-items: center; gap: 15px; padding: 19px; cursor: pointer; max-width: 540px; margin: 0 auto 28px; }
+.focus-card:active { transform: scale(.985); }
+.focus-icon { display: grid; place-items: center; width: 54px; height: 54px; flex: 0 0 auto; border-radius: 18px; background: linear-gradient(135deg,#ffbfcb,#e4c9f2); color: white; font-size: 1.7rem; box-shadow: 0 8px 17px rgba(211,126,155,.28); }
+.focus-kicker { color: #a3737b; font-size: .65rem; letter-spacing: .1em; font-weight: 800; }
+.focus-card h2, .section-heading h2, .studio-heading h2 { background: none; -webkit-text-fill-color: initial; color: #322d36; font-size: 1.05rem; margin: 3px 0; }
+.focus-card p, .studio-heading p { color: #706878; font-size: .82rem; line-height: 1.35; margin: 0; }
+.focus-card .arrow { margin-left: auto; color: #997987; font-size: 1.2rem; }
+.section-heading { max-width: 540px; display: flex; align-items: center; justify-content: space-between; margin: 0 auto 5px; }
+.section-heading h2 { font-size: 1.2rem; }
+.section-heading span { color: #917989; font-weight: 700; font-size: .75rem; }
+.quick-grid { max-width: 560px; }
+.quick-card { width: 100%; border: 0; text-align: left; min-height: 150px; display: flex; flex-direction: column; align-items: flex-start; border-radius: 25px; padding: 18px; color: #3e3542; box-shadow: 0 10px 24px rgba(93,67,91,.12); transition: transform .2s ease; }
+.quick-card:active { transform: scale(.97); }
+.quick-card.blush { background: linear-gradient(135deg,rgba(255,223,231,.94),rgba(255,239,218,.92)); }
+.quick-card.lavender { background: linear-gradient(135deg,rgba(230,221,255,.94),rgba(215,239,247,.92)); }
+.quick-icon { font-size: 1.55rem; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 15px; background: rgba(255,255,255,.58); margin-bottom: auto; }
+.quick-title { font-weight: 800; font-size: 1.1rem; }
+.quick-card small { color: #796d7b; margin-top: 3px; }
+.encouragement { border-radius: 22px; max-width: 540px; margin: 23px auto; padding: 15px 17px; display: flex; align-items: center; gap: 13px; }
+.encouragement > span { font-size: 1.6rem; }
+.encouragement strong { color: #4b414e; font-size: .9rem; }
+.encouragement p { margin: 2px 0 0; color: #716775; font-size: .8rem; }
+
+.studio-card { max-width: 540px; margin: 0 auto 22px; padding: 20px; border-radius: 28px; }
+.studio-heading { display: flex; gap: 12px; align-items: center; margin-bottom: 18px; }
+.studio-icon { display: grid; place-items: center; background: #f8ddec; color: #be6e92; width: 43px; height: 43px; border-radius: 15px; font-size: 1.3rem; }
+.wallpaper-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; }
+.wallpaper-option { position: relative; height: 88px; border: 2px solid transparent; border-radius: 18px; overflow: hidden; color: white; background-size: cover; background-position: center; box-shadow: inset 0 -45px 25px -18px rgba(36,24,38,.68); padding: 0; text-align: left; }
+.wallpaper-option span { position: absolute; bottom: 9px; left: 10px; font-weight: 750; font-size: .78rem; text-shadow: 0 1px 3px rgba(0,0,0,.4); }
+.wallpaper-option.selected { border-color: #e8759f; }
+.wallpaper-option ion-icon { position: absolute; right: 7px; top: 7px; color: #e8759f; background: white; border-radius: 50%; font-size: 20px; }
+.upload-wallpaper { margin-top: 14px; padding: 13px; border-radius: 17px; border: 1px dashed #d9aebb; display: flex; align-items: center; gap: 11px; color: #aa6683; cursor: pointer; }
+.upload-wallpaper > ion-icon { font-size: 1.35rem; }
+.upload-wallpaper span { display: flex; flex-direction: column; color: #554b58; font-size: .83rem; }
+.upload-wallpaper small { color: #927987; font-size: .7rem; margin-top: 2px; }
+.upload-wallpaper input { display: none; }
+.upload-wallpaper .upload-arrow { margin-left: auto; color: #a86f86; }
+.studio-card > ion-button { margin: 9px 0 -6px -8px; }
+.language-card { max-width: 540px; margin: 0 auto 28px; }
+
+@media (prefers-color-scheme: dark) {
+  .app-header ion-toolbar { --background: rgba(29, 25, 32, .76); --color: #f9f0f5; }
+  .greeting h1, .settings-intro h1, .focus-card h2, .section-heading h2, .studio-heading h2 { color: #f9f0f5; }
+  .greeting p:not(.eyebrow), .settings-intro p:not(.eyebrow), .focus-card p, .studio-heading p, .encouragement p { color: #d2c5d0; }
+  .focus-card, .encouragement, .studio-card { background: rgba(40, 34, 43, .76); border-color: rgba(255,255,255,.13); }
+  .quick-card.blush { background: linear-gradient(135deg, rgba(111,62,83,.9), rgba(100,70,59,.9)); }
+  .quick-card.lavender { background: linear-gradient(135deg, rgba(69,61,111,.9), rgba(47,83,92,.9)); }
+  .quick-card, .quick-card small, .encouragement strong, .upload-wallpaper span { color: #fff6fb; }
 }
 
 /* Smooth page transitions */
